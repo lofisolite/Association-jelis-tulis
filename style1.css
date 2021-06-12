@@ -298,6 +298,7 @@ main{
   text-decoration:underline;
   color:#583B28;
   letter-spacing: 3px;
+  font-size:1.7rem;
   overflow-wrap:break-word;
 }
 
@@ -306,7 +307,6 @@ main{
   font-weight:bolder;
   font-size:1.1rem;
 }
-
 
 .container-speech{
   display:flex;
@@ -349,7 +349,6 @@ main{
   }
 }
 
-
 /* speech */
 
 .speech{
@@ -374,7 +373,7 @@ main{
 /* footer part*/
 
 footer{
-  background: #462f20;
+  background:	#573b28;
   color:#fff;
   display:flex;
   justify-content: center;
