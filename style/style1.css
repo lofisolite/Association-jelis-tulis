@@ -21,7 +21,7 @@ header{
   }
 
   .container-header h1{
-    font-size:3.5rem;
+    font-size:3rem;
     font-family: Tangerine, cursive;
     letter-spacing:4px;
     font-weight:800;
@@ -40,28 +40,6 @@ header{
     }
 }
 
-/*  Extra-Small device */
-@media screen and (max-width:450px){
-  .container-header h1{
-    font-size:2.5rem;
-  }
-  .container-header img{
-    width:60px;
-    height:60px;
-    margin-left:5px;
-    margin-right:5px;
-    margin-top:10px;
-  }
-  .navbar-container{
-    width:300px;
-    }
-  .navbar-links{
-    padding:0;
-    margin:0;
-    border:solid 1px blue;
-  }
-}
-
 /* menu burger */
   .menu-burger {
     display:block;
@@ -69,7 +47,7 @@ header{
     padding:0;
     width:45px;
     height:45px;
-    margin:25px 20px;
+    margin:25px 10px 25px 5px;
     border:none;
     color:#29369c;
     background:transparent;
@@ -133,7 +111,7 @@ header{
 
 .navbar-container{
   list-style:none;
-  padding:5px;
+  padding:10px 5px;
   display:flex;
   flex-direction:column;
   width:360px;
@@ -159,7 +137,7 @@ header{
 }
 
 .navbar-links {
-  padding: 5px;
+  padding: 5px 0px 5px 10px;
   border-radius:50px 0px 0px 50px;
   background: #F7B77B;
 }
@@ -172,11 +150,39 @@ header{
 }
 
 .navbar-links > a:hover {
-  padding-left:2rem;
+  padding-left:1.5rem;
   letter-spacing:5px;
   color:white;
 }
 
+/*  Extra-Small device */
+@media screen and (max-width:450px){
+  .container-header h1{
+    font-size:2rem;
+  }
+  .container-header img{
+    width:60px;
+    height:60px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:10px;
+  }
+}
+
+@media screen and (max-width:425px){
+
+  .navbar-container{
+    width:250px;
+  }
+  .navbar-links > a{
+    font-size:1.3rem;
+  }
+  .navbar-links > a:hover {
+    padding-left:1rem;
+    letter-spacing:0px;
+    color:white;
+  }
+}
 
 /* partie citation */
 
