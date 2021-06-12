@@ -22,14 +22,45 @@ header{
 
   .container-header h1{
     font-size:3.5rem;
-    font-family: 'Tangerine', cursive;
+    font-family: Tangerine, cursive;
     letter-spacing:4px;
     font-weight:800;
     color:#583B28;
     margin-top:5px;
     text-align:center;
+    animation: title 2s ease-in-out;
   }
 
+  @keyframes title{
+    from{
+      color:transparent;
+    }
+    to{
+      color:#583B28;
+    }
+}
+
+/*  Extra-Small device */
+@media screen and (max-width:450px){
+  .container-header h1{
+    font-size:2.5rem;
+  }
+  .container-header img{
+    width:60px;
+    height:60px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-top:10px;
+  }
+  .navbar-container{
+    width:300px;
+    }
+  .navbar-links{
+    padding:0;
+    margin:0;
+    border:solid 1px blue;
+  }
+}
 
 /* menu burger */
   .menu-burger {
@@ -100,9 +131,9 @@ header{
   font-size:1.3rem;
 }
 
-.navbar-links{
+.navbar-container{
   list-style:none;
-  padding:15px;
+  padding:5px;
   display:flex;
   flex-direction:column;
   width:360px;
@@ -121,28 +152,26 @@ header{
   transition: all .8s ease-in-out;
 }
 
-.show-nav .navbar-links {
+.show-nav .navbar-container {
   display:flex;
   justify-content: space-between;
   transform: translateY(0%);
 }
 
-.navbar-link {
+.navbar-links {
   padding: 5px;
-  margin:5px;
   border-radius:50px 0px 0px 50px;
   background: #F7B77B;
 }
 
-.navbar-link > a {
+.navbar-links > a {
   display:inline-block;
-  padding:1rem;
   font-size:1.5rem;
   color:#583B28;
   transition: all .4s ease-in-out;
 }
 
-.navbar-link > a:hover {
+.navbar-links > a:hover {
   padding-left:2rem;
   letter-spacing:5px;
   color:white;
@@ -269,6 +298,7 @@ main{
   text-decoration:underline;
   color:#583B28;
   letter-spacing: 3px;
+  overflow-wrap:break-word;
 }
 
 .event span{
@@ -316,23 +346,6 @@ main{
   }
   .large-device{
     display:none;
-  }
-}
-
-/*  Extra-Small device */
-@media screen and (max-width:450px){
-  .container-header h1{
-    font-size:2.5rem;
-  }
-  .container-header img{
-    width:70px;
-    height:70px;
-    padding-left:15px;
-    padding-top:10px;
-  }
-  .navbar-links{
-    padding:5px;
-    width:300px;
   }
 }
 

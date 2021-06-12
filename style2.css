@@ -29,7 +29,17 @@ header{
     color:#583B28;
     margin-top:5px;
     text-align:center;
+    animation : title 2s ease-in-out;
   }
+
+  @keyframes title{
+    from{
+      color:transparent;
+    }
+    to{
+      color:#583B28;
+    }
+}
 
 
 /* menu burger */
@@ -166,7 +176,7 @@ header hr{
   font-weight:550;
   letter-spacing:2px;
   background: rgb(27,66,164);
-  background: linear-gradient(90deg, rgba(27,66,164,1) 0%, rgba(110,135,189,1) 71%, rgba(253,242,231,0.5130427170868348) 100%);
+  background: linear-gradient(90deg, rgba(27,66,164,1) 0%, rgba(110,135,189,1) 71%, rgba(253,242,231,0.5) 100%);
   width:97%;
   border-radius:0px 50px 50px 0px;
 }
@@ -251,6 +261,11 @@ main section h2{
   color: #29369c;
 }
 
+.adresse span{
+  font-style:oblique;
+  text-decoration: underline;
+}
+
 
 /* main cards */
 .container-card{
@@ -267,7 +282,7 @@ main section h2{
 
 .card-top{
   font-size:1.4rem;
-  font-family:poppins, sans-serif;
+  font-family: poppins, sans-serif;
   color:white;
   font-style:italic;
   background: rgb(63,94,251);
@@ -329,7 +344,7 @@ main section h2{
 
 .gallerie .ancien{
     margin:25px 0px 10px 0px;
-    padding: 15px 30px;
+    padding: 15px;
     border: solid 2px transparent;
     border-radius: 20px;
     background: #29369c;
@@ -337,7 +352,6 @@ main section h2{
     font-size: 1.1rem;
     font-weight: 600;
     outline:none;
-    transition: transform 0.5s ease;
 }
 
 .gallerie .ancien:hover, .galerie .ancien:focus{
@@ -345,7 +359,6 @@ main section h2{
   border:solid 2px #29369c;
   color: #29369c;
   text-decoration:underline;
-  transform: scale(1.1, 1.1);
 }
 
 
@@ -405,7 +418,6 @@ footer{
   color:#fff;
   display:flex;
   justify-content: center;
-  font-family:calibri;
   font-size:1.1rem;
 }
 
@@ -420,7 +432,7 @@ footer section{
   flex-direction:column;
   padding:20px 30px;
   width:auto;
-  font-family:'Poppins', sans-serif;
+  font-family:Poppins, sans-serif;
   font-size:0.9rem;
 }
 
