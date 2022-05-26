@@ -1,56 +1,16 @@
-/* breadcrumb */
-
-.fil-ariane-container{
-  padding:10px 0px 10px 20px;
-  font-family:'Titillium Web', sans-serif;
-  font-size:1.25rem;
-  font-weight:550;
-  letter-spacing:2px;
-  background: rgb(27,66,164);
-  background: linear-gradient(90deg, rgba(27,66,164,1) 0%, rgba(110,135,189,1) 71%, rgba(253,242,231,0.5) 100%);
-  width:97%;
-  border-radius:0px 50px 50px 0px;
-}
-
-.fil-ariane-items{
-  display:inline-block;
-}
-
-.fil-ariane-items:not(:last-of-type)::after{
-  content : ' > ';
-  color: white;
-  margin:0 5px;
-}
-
-.on{color:white;}
-.on:hover{
-  color:white;
-}
-.off{color:lightgrey;}
-
-
-/* main part */
-
-main{
-  padding:20px 0px 30px 0px;
-}
-
-.main-container{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
-
-.main-element{
-  width: 90%;
-  margin:20px 0;
-}
 
 .main-paragraph-all h3{
   letter-spacing: 2px;
   text-align:center;
   padding:5px 0px;
+}
+
+#past-event{
+  width:100%;
+}
+
+.main-paragraph-all{
+  margin:0 auto;
 }
 
 .main-paragraph-all .organisation{
@@ -107,11 +67,11 @@ main{
 /* images */
 .container-img{
   display:flex;
-  justify-content: space-between;
-  width:90%;
+  justify-content: center;
+  width:95%;
 }
   .container-img img{
-  width:50%;
+  width:40%;
 }
 
 /* gallerie */
@@ -144,28 +104,7 @@ main{
   margin:50px 0px 20px 0px;
   }
 
-
-.gallerie .ancien{
-    margin:25px 0px 10px 0px;
-    padding: 15px;
-    border: solid 2px transparent;
-    border-radius: 20px;
-    background: #29369c;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    outline:none;
-}
-
-.gallerie .ancien:hover, .galerie .ancien:focus{
-  background: #fff;
-  border:solid 2px #29369c;
-  color: #29369c;
-  text-decoration:underline;
-}
-
 /* Media queries */
-
 /* Cards et menu */
 @media screen and (max-width:900px){
   .container-card{
@@ -173,7 +112,7 @@ main{
     align-items:center;
   }
   .card{
-    width:80%;
+    width:70%;
     margin:15px 0px;
   }
   .navbar-links{
@@ -184,10 +123,14 @@ main{
     padding:0px;
     margin:0px;
   }
+
+  .main-element{
+    width:98%;
+  }
 }
 
 /* images */
-@media screen and (max-width:660px){
+@media screen and (max-width:750px){
   .medium-image{
     display:none;
   }
@@ -196,5 +139,11 @@ main{
 }
   .medium-device{
     display:none;
+  }
+}
+
+@media screen and (max-width:500px){
+  .main-element{
+    width:100%;
   }
 }

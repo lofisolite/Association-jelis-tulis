@@ -2,7 +2,15 @@ body{
   margin:0;
 }
 
-/* header part*/
+:root{
+  --brown: #583B28;
+  --darkBlue:#29369c;
+  --lightOrange:#F7B77B;
+  --beige:#e7d4cb;
+  --darkOrange:#d96f0d;
+}
+
+/* header */
 header{
   width:100%;
   }
@@ -49,7 +57,7 @@ header{
     height:45px;
     margin:25px 10px 25px 5px;
     border:none;
-    color:#29369c;
+    color:var(--darkBlue);
     background:transparent;
     cursor:pointer;
   }
@@ -67,33 +75,36 @@ header{
     display:block;
     width:45px;
     height:4px;
-    border-radius:4px;
-    background:#29369c;
+    border-radius : 3px;
+    background: var(--darkBlue);
     transition: all .5s ease-in-out;
   }
 
-  .bar::before, .bar::after {
+  .bar::before, .bar::after{
     content:"";
     width:45px;
     height:4px;
     position:absolute;
     left:0;
-    background:#29369c;
+    background:var(--darkBlue);
     border-radius:3px;
     transition: all .5s ease-in-out;
   }
 
+
   .bar::before {
-    transform:translateY(-12px)
+    transform:translateY(-12px);
   }
 
   .bar::after {
-    transform:translateY(12px)
+    transform:translateY(12px);
   }
 
+  
   .show-menu .bar {
     background:transparent;
   }
+  
 
   .show-menu .bar::before {
     transform:rotate(45deg);
@@ -102,7 +113,7 @@ header{
     .show-menu .bar::after {
     transform:rotate(-45deg);
   }
-}
+
 
 /* navbar */
 .navbar{
@@ -114,8 +125,8 @@ header{
   padding:10px 5px;
   display:flex;
   flex-direction:column;
-  width:360px;
-  height:550px;
+  width:280px;
+  height:400px;
   position:absolute;
   top:-18px;
   right:0px;
@@ -124,7 +135,7 @@ header{
   border-top:solid 5px white;
   border-left:solid 5px white;
   border-bottom:solid 5px white;
-  background: #F7B77B;
+  background: var(--lightOrange);
   z-index:2;
   transform: translateY(-200%);
   transition: all .8s ease-in-out;
@@ -139,19 +150,19 @@ header{
 .navbar-links {
   padding: 5px 0px 5px 10px;
   border-radius:50px 0px 0px 50px;
-  background: #F7B77B;
+  background: var(--lightOrange);
 }
 
 .navbar-links > a {
   display:inline-block;
   font-size:1.5rem;
-  color:#583B28;
+  color:var(--brown);
   transition: all .4s ease-in-out;
 }
 
 .navbar-links > a:hover {
-  padding-left:1.5rem;
-  letter-spacing:5px;
+  padding-left:1rem;
+  letter-spacing:3.5px;
   color:white;
 }
 
@@ -170,7 +181,6 @@ header{
 }
 
 @media screen and (max-width:425px){
-
   .navbar-container{
     width:250px;
   }
@@ -189,7 +199,7 @@ header{
 header hr{
   width: 80%;
   height: 2px;
-  background-color: #F7B77B;
+  background-color: var(--lightOrange);
   border:none;
 }
 
@@ -256,37 +266,33 @@ header hr{
 main{
   width:100%;
   font-family: verdana, sans-serif;
-  background:#e7d4cb;
+  background:var(--beige);
   border:solid 1px transparent;
 }
 
-.container-fluid{
-  margin:50px 0px;
-}
-
-.row{
-  margin:30px 0px;
-  box-shadow:0 0 12px lightgrey;
+.box-section{
+  padding:25px 0px;
+  margin :0 auto;
+  width:95%;
 }
 
 .main-element{
   padding:0px;
   height:auto;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius:4px;
+  background: rgba(255, 255, 255);
 }
 
 .main-element h2{
-  background: #F7B77B;
+  background: var(--lightOrange);
   font-family: 'Titillium Web', sans-serif;
   font-weight: 600;
-  font-size:1.5rem;
+  font-size:1.8rem;
   text-align:center;
   padding:10px 0px;
   letter-spacing:4px;
 }
 
-.association span{
+.section-association span{
   font-weight:bolder;
 }
 
@@ -302,22 +308,32 @@ main{
 
 .main-paragraph-all h3{
   text-decoration:underline;
-  color:#583B28;
+  color:var(--brown);
   letter-spacing: 3px;
   font-size:1.7rem;
   overflow-wrap:break-word;
 }
 
-.event span{
+.section-event span{
   text-decoration:underline;
   font-weight:bolder;
   font-size:1.1rem;
 }
 
-.container-speech{
-  display:flex;
-  justify-items:center;
+.section-soutien{
+  padding:0px 30px;
 }
+
+.section-soutien p{
+  text-align:center;
+}
+
+.contact-italic{
+  font-style:italic;
+  letter-spacing:1px;
+  font-weight:550;
+}
+
 
 @media screen and (max-width:1400px){
   .long-section{
@@ -346,8 +362,65 @@ main{
   }
 }
 
-@media screen and (max-width:991px){
-  .row img{
+@media screen and (max-width:800px){
+  #soutien{
+    width:97%;
+  }
+  .section-soutien{
+    padding:0px;
+  }
+  .box-section{
+    padding:15px;
+    width:98%;
+  }
+}
+
+@media screen and (max-width:500px){
+  #soutien{
+    width:97%;
+  }
+  .section-soutien{
+    padding:0px;
+  }
+  .box-section{
+    padding:15px 0px;
+    width:100%;
+  }
+}
+
+.box-img{
+  display:flex;
+  flex-direction:column;
+  background-color: white;
+}
+
+.box-orange{
+  height:55px;
+  width:100%;
+  background-color:var(--lightOrange);
+}
+
+#box-soutien{
+  height:55px;
+}
+
+.image-section{
+    width : 450px;
+    height : auto;
+    display:block;
+    margin-top:auto;
+    margin-bottom:auto;
+    
+}
+
+@media screen and (max-width:1200px){
+  .image-section{
+    width:400px;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .image-section{
     display:none;
   }
   .large-device{
@@ -355,31 +428,9 @@ main{
   }
 }
 
-/* speech */
-
-.speech{
-  border:3px solid rgba(41, 54, 156, 0.5);
-  border-radius: 0px 35px;
-  margin:0 5%;
-  width:auto;
-  font-family:verdana, sans-serif;
-  background-color:#ACC8E5;
-  letter-spacing:1px;
-  font-style:italic;
-  font-size:1rem;
-  text-align:justify;
-  padding:10px;
-  text-indent:25px;
-}
-
-.speech span{
-  font-weight:bolder;
-}
-
 /* footer part*/
-
 footer{
-  background:	#573b28;
+  background:	var(--brown);
   color:#fff;
   display:flex;
   justify-content: center;
@@ -404,7 +455,7 @@ footer section{
 footer section span{
   border:1px solid lightgray;
   border-radius:5px;
-  color:#d96f0d;
+  color:var(--darkOrange);
   background-color:rgba(255,255,255,0.7);
   font-style:italic;
   padding:6px;
@@ -428,7 +479,7 @@ footer section span{
 
 .footer-link:hover{
   text-decoration:underline;
-  color:#F7B77B;
+  color:var(--lightOrange);
 }
 
 .footer-left, .footer-middle{
@@ -452,10 +503,8 @@ footer section span{
   font-size:1.5rem;
 }
 
+
 @media screen and (max-width:768px){
-  .speech{
-    display:none;
-  }
   footer{
   display: block;
   width: 100%;
@@ -481,7 +530,7 @@ footer section span{
     display:inline-block;
     width:75%;
     height: 2px;
-    background-color: #F7B77B;
+    background-color: var(--lightOrange);
     border:none;
   }
 }

@@ -1,0 +1,100 @@
+/* breadcrumb */
+
+.fil-ariane-container{
+  padding:10px 0px 10px 20px;
+  font-family:'Titillium Web', sans-serif;
+  font-size:1.25rem;
+  font-weight:550;
+  letter-spacing:2px;
+  background: rgb(27,66,164);
+  background: linear-gradient(90deg, rgba(27,66,164,1) 0%, rgba(110,135,189,1) 71%, rgba(253,242,231,0.5) 100%);
+  width:97%;
+  border-radius:0px 50px 50px 0px;
+}
+
+.fil-ariane-items{
+  display:inline-block;
+}
+
+.fil-ariane-items:not(:last-of-type)::after{
+  content : ' > ';
+  color: white;
+  margin:0 5px;
+}
+
+.on{color:white;}
+.on:hover{
+  color:white;
+}
+.off{color:lightgrey;}
+
+.button{
+  margin:25px 0px 10px 0px;
+  padding: 15px;
+  border: solid 2px transparent;
+  border-radius: 20px;
+  background: #d96f0d;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  outline:none;
+}
+
+.button:hover, .button:focus{
+background: #fff;
+border:solid 2px #d96f0d;
+color: #d96f0d;
+text-decoration:underline;
+}
+
+/* main */
+.contact span{
+  text-decoration:underline;
+  letter-spacing:1px;
+}
+
+.main-paragraph-all{
+  width:80%;
+}
+
+/* formulaire */
+.formulaire{
+  display:flex;
+  justify-content: center;
+}
+
+.main-form{
+  width:60%;
+}
+
+form{
+  width:350px;
+  padding:20px 0px;
+}
+
+label{
+  font-weight:500;
+  font-size:1.1rem;
+}
+
+.form-button{
+  padding:10px;
+}
+
+@media screen and (max-width:1000px){
+  .main-form{
+    width:80%;
+  }
+}
+
+@media screen and (max-width:700px){
+  .main-form{
+    width:98%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .main-form{
+    width:100%;
+  }
+}
